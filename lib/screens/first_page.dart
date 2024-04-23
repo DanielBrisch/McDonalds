@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:delivery/Controller/Routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -69,7 +68,9 @@ class _FirstPageState extends State<FirstPage> {
                     width: size.width * 0.9,
                     height: size.height * 0.06,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, Routes.home);
+                        },
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                                 const Color(0xFFfcca0f))),

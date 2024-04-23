@@ -1,3 +1,4 @@
+import 'package:delivery/Controller/Routes.dart';
 import 'package:delivery/screens/first_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       home: FirstPage(),
       debugShowCheckedModeBanner: false,
+      onGenerateRoute: AppRouter.generateRoute,
+      initialRoute: Routes.first,
     );
   }
 }
