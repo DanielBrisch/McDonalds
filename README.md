@@ -1,8 +1,22 @@
 # McDonald Redesign
 
-<h2 align="center">Init Screen</h2> 
 
-<p align="center">
-<img src="./lib/assets/1.png">
-</p>
+
+<table align= "center">
+    <tr>
+        <td>
+            <h2 align="center">Init Screen</h2> 
+            <p>
+                <img src="./lib/assets/readme/1.png">
+            </p>
+        </td>
+        <td>
+            <h2 align="center">Home Screen</h2> 
+            <p>
+                <img src="./lib/assets/readme/2.png">
+            </p>
+        </td>
+    </tr>
+</table>
+
 

@@ -262,7 +262,7 @@ class _HomeAppState extends State<HomeApp> {
                                           color: Colors.white,
                                           size: 17,
                                         ),
-                                        Text('adicionar',
+                                        Text('Add',
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize: 14))
