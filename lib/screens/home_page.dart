@@ -41,24 +41,29 @@ class _HomeAppState extends State<HomeApp> {
 
   List<SpecialContainer> lsSpecial = [
     SpecialContainer(
-      asset: './lib/assets/meal.png',
-      name: 'teste',
-      price: '100',
+      asset: './lib/assets/combo2.png',
+      name: 'Happy Meal combo',
+      price: '24.99',
+    ),
+    SpecialContainer(
+      asset: './lib/assets/combo3.png',
+      name: 'hamburguer combo',
+      price: '13.50',
+    ),
+    SpecialContainer(
+      asset: './lib/assets/combo4.png',
+      name: 'dinner time',
+      price: '15.00',
+    ),
+    SpecialContainer(
+      asset: './lib/assets/combo1.png',
+      name: 'grandiose',
+      price: '17.40',
     ),
     SpecialContainer(
       asset: './lib/assets/meal.png',
-      name: 'teste',
-      price: '100',
-    ),
-    SpecialContainer(
-      asset: './lib/assets/meal.png',
-      name: 'teste',
-      price: '100',
-    ),
-    SpecialContainer(
-      asset: './lib/assets/meal.png',
-      name: 'teste',
-      price: '100',
+      name: 'Happy Meal',
+      price: '12.99',
     ),
   ];
 
@@ -196,11 +201,8 @@ class _HomeAppState extends State<HomeApp> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(
-                          size.width * 0.10,
-                          size.width * 0.02,
-                          size.width * 0.10,
-                          size.width * 0.04),
+                      padding: EdgeInsets.fromLTRB(size.width * 0.10,
+                          size.width * 0.02, size.width * 0.10, 0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -214,7 +216,7 @@ class _HomeAppState extends State<HomeApp> {
                               const Text('See it all',
                                   style: TextStyle(
                                       color: Color(0xFFDB0007),
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 20)),
                               SizedBox(width: size.width * 0.02),
                               const Icon(
@@ -228,18 +230,47 @@ class _HomeAppState extends State<HomeApp> {
                       ),
                     ),
                     SizedBox(
-                      height: size.height * 0.13,
+                      height: size.height * 0.28,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: lsSpecial.length,
                         itemBuilder: (context, index) {
                           SpecialContainer item = lsSpecial[index];
-                          return SizedBox(
-                            width: size.width * 0.3,
-                            child: Column(
+                          return Stack(children: [
+                            Column(
                               children: [item],
                             ),
-                          );
+                            Positioned(
+                              top: size.height * 0.22,
+                              left: size.height * 0.033,
+                              child: SizedBox(
+                                width: size.width * 0.302,
+                                height: size.height * 0.035,
+                                child: ElevatedButton(
+                                    style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all(
+                                              const Color(0xFFDB0007)),
+                                    ),
+                                    onPressed: () {},
+                                    child: const Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Icon(
+                                          Icons.add_circle_rounded,
+                                          color: Colors.white,
+                                          size: 17,
+                                        ),
+                                        Text('adicionar',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 14))
+                                      ],
+                                    )),
+                              ),
+                            )
+                          ]);
                         },
                       ),
                     ),
@@ -249,7 +280,7 @@ class _HomeAppState extends State<HomeApp> {
             ),
           ),
         ]),
-        bottomNavigationBar: const BottomBar());
+        bottomNavigationBar: BottomBar());
   }
 
   carouselIndicator() {

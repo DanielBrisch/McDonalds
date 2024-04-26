@@ -7,6 +7,7 @@ class CarouselContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(20)),
@@ -58,8 +59,8 @@ class CarouselContainer extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 27, right: 140),
                       child: SizedBox(
-                        width: 130,
-                        height: 35,
+                        width: size.width * 0.3,
+                        height: size.height * 0.04,
                         child: ElevatedButton(
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
@@ -80,7 +81,7 @@ class CarouselContainer extends StatelessWidget {
               Padding(
                   padding: const EdgeInsets.only(left: 137, top: 30),
                   child: SizedBox(
-                      height: 190,
+                      height: size.height * 0.215,
                       child: Image.asset('./lib/assets/break.png'))),
             ],
           ),

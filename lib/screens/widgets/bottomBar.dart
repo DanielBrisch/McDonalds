@@ -26,21 +26,19 @@ class _BottomBarState extends State<BottomBar> {
         ],
       ),
       height: size.height * 0.07,
-      child: Expanded(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            IconButton(
-                icon: const Icon(
-                  Icons.home,
-                  color: Color(0xFFDB0007),
-                ),
-                onPressed: () {}),
-            IconButton(icon: const Icon(Icons.favorite), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.location_on), onPressed: () {}),
-            IconButton(icon: const Icon(Icons.person), onPressed: () {}),
-          ],
-        ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          IconButton(
+              icon: const Icon(
+                Icons.home,
+                color: Color(0xFFDB0007),
+              ),
+              onPressed: () {}),
+          IconButton(icon: const Icon(Icons.favorite), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.location_on), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.person), onPressed: () {}),
+        ],
       ),
     );
   }
