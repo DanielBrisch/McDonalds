@@ -28,7 +28,7 @@ class _BottomBarState extends State<BottomBar> {
       height: size.height * 0.07,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
+        children: [
           IconButton(
               icon: const Icon(
                 Icons.home,

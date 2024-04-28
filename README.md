@@ -17,6 +17,14 @@
             </p>
         </td>
     </tr>
+     <tr>
+        <td>
+            <h2 align="center">Selected Item Screen</h2> 
+            <p>
+                <img src="./lib/assets/readme/3.png">
+            </p>
+        </td>
+    </tr>
 </table>
 
 

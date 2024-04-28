@@ -280,7 +280,7 @@ class _HomeAppState extends State<HomeApp> {
             ),
           ),
         ]),
-        bottomNavigationBar: BottomBar());
+        bottomNavigationBar: const BottomBar());
   }
 
   carouselIndicator() {
