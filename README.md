@@ -1,6 +1,4 @@
-# McDonald Redesign
-
-
+<h1 align="center">McDonald Redesign</h1> 
 
 <table align= "center">
     <tr>
