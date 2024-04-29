@@ -1,15 +1,18 @@
 import 'package:delivery/Controller/Routes.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class SpecialContainer extends StatefulWidget {
   String? asset;
   String? name;
   String? price;
+  double? left;
   SpecialContainer(
       {super.key,
       required this.asset,
       required this.name,
-      required this.price});
+      required this.price,
+      this.left});
 
   @override
   State<SpecialContainer> createState() => _SpecialContainerState();
@@ -24,7 +27,7 @@ class _SpecialContainerState extends State<SpecialContainer> {
         Navigator.pushNamed(context, Routes.selected);
       },
       child: Padding(
-        padding: const EdgeInsets.only(left: 15, top: 15),
+        padding: EdgeInsets.only(left: widget.left ?? 15, top: 15),
         child: Container(
           height: size.height * 0.22,
           width: size.width * 0.365,

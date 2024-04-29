@@ -1,3 +1,4 @@
+import 'package:delivery/Controller/Routes.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
@@ -38,6 +39,11 @@ class _BottomBarState extends State<BottomBar> {
           IconButton(icon: const Icon(Icons.favorite), onPressed: () {}),
           IconButton(icon: const Icon(Icons.location_on), onPressed: () {}),
           IconButton(icon: const Icon(Icons.person), onPressed: () {}),
+          IconButton(
+              icon: const Icon(Icons.shopping_cart),
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.car);
+              }),
         ],
       ),
     );
