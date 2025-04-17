@@ -1,5 +1,5 @@
-import 'package:delivery/Controller/Routes.dart';
-import 'package:delivery/screens/first_page.dart';
+import 'package:delivery/app_routes.dart';
+import 'package:delivery/ui/screens/introduction_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: FirstPage(),
+      home: IntroductionPage(),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRouter.generateRoute,
       initialRoute: Routes.first,
